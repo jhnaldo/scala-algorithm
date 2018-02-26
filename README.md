@@ -1,1 +1,3 @@
-# scala-algorithm
+# Data Structures
+
+# Algorithms
