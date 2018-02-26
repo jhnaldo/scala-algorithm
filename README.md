@@ -1,6 +1,6 @@
 # Goal
-* Learn algorithms through [Introduction To Algorithm](https://mitpress.mit.edu/books/introduction-algorithms)
-* Implement algorithms in [Scala](https://www.scala-lang.org/)
+* Learn data structures and algorithms of [Introduction to Algorithms](https://mitpress.mit.edu/books/introduction-algorithms)
+* Learn [Scala](https://www.scala-lang.org/)
 
 # Implemented Algorithms
 * Sort
