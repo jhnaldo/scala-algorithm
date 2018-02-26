@@ -1,0 +1,13 @@
+# OSX
+.DS_Store
+
+# sbt
+.build
+project/project/
+project/target/
+target/
+
+# etc
+*.swo
+*.swp
+*~
