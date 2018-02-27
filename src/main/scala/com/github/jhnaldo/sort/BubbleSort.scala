@@ -1,11 +1,24 @@
 package com.github.jhnaldo.sort
 
+/**
+ * Bubble sort, sometimes referred to as sinking sort, is a simple sorting algorithm
+ * that repeatedly steps through the list to be sorted, compares each pair of adjacent
+ * items and swaps them if they are in the wrong order.
+ *
+ * Time Complexity:
+ *  - Best - O(n)
+ *  - Worst - O(n^2^)
+ *  - Average - O(n^2^)
+ *
+ * @see [[https://en.wikipedia.org/wiki/Bubble_sort]]
+ */
 object BubbleSort {
   /**
-   * Sorts a list of elements using bubble sort algorithm
+   * Sorts a list of elements
    *
-   * @param list a list of n elements
-   * @return the sorted list of n elements
+   * @tparam A the type of each element
+   * @param list a list of elements
+   * @return the sorted list of the elements
    */
   def sort[A <% Ordered[A]](list: List[A]): List[A] = {
     def bubble(list: List[A], acc: List[A]): List[A] = list match {

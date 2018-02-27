@@ -1,10 +1,25 @@
 package com.github.jhnaldo.sort
 
+/**
+ * Conceptually, a merge sort works as follows:
+ *  - 1. Divide the unsorted list into n sublists, each containing 1 element
+ *  (a list of 1 element is considered sorted).
+ *  - 2. Repeatedly merge sublists to produce new sorted sublists until there is
+ *  only 1 sublist remaining. This will be the sorted list.
+ *
+ * Time Complexity:
+ *  - Best - O(n log n)
+ *  - Worst - O(n log n)
+ *  - Average - O(n log n)
+ *
+ * @see [[https://en.wikipedia.org/wiki/Merge_sort]]
+ */
 object MergeSort {
   /**
-   * Sorts a list of elements using merge sort algorithm
+   * Sorts a list of elements
    *
-   * @param list a list of n elements
+   * @tparam A the type of each element
+   * @param list a list of elements
    * @return the sorted list of n elements
    */
   def sort[A <% Ordered[A]](list: List[A]): List[A] = {
@@ -18,10 +33,11 @@ object MergeSort {
   /**
    * Merges two sorted lists of elements in sorted order
    *
-   * @param left a list of n elements
-   * @param right a list of m elements
+   * @tparam A the type of each element
+   * @param left a sorted list of elements
+   * @param right a sorted list of elements
    * @param sorted a sorted list in the reversed order
-   * @return the sorted list of n+m elements
+   * @return the sorted list merged the left and right sorted lists
    */
   def merge[A <% Ordered[A]](
     left: List[A],

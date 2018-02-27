@@ -1,11 +1,23 @@
 package com.github.jhnaldo.sort
 
+/**
+ * Insertion sort is a simple sorting algorithm that builds the final sorted array
+ * (or list) one item at a time.
+ *
+ * Time Complexity:
+ *  - Best - O(n)
+ *  - Worst - O(n^2^)
+ *  - Average - O(n^2^)
+ *
+ * @see [[https://en.wikipedia.org/wiki/Insertion_sort]]
+ */
 object InsertionSort {
   /**
-   * Sorts a list of elements using insertion sort algorithm
+   * Sorts a list of elements
    *
-   * @param list a list of n elements
-   * @return the sorted list of n elements
+   * @tparam A the type of each element
+   * @param list a list of elements
+   * @return the sorted list of the elements
    */
   def sort[A <% Ordered[A]](list: List[A]): List[A] = {
     def insertList(list: List[A], sorted: List[A]): List[A] = list match {
