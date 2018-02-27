@@ -4,6 +4,7 @@
 
 # Implemented Algorithms
 * Sort
+  * [Bubble Sort](https://en.wikipedia.org/wiki/Bubble_sort)
   * [Insertion Sort](https://en.wikipedia.org/wiki/Insertion_sort)
   * [Merge Sort](https://en.wikipedia.org/wiki/Merge_sort)
 * Search
