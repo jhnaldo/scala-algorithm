@@ -8,3 +8,4 @@
   * [Merge Sort](https://en.wikipedia.org/wiki/Merge_sort)
 * Search
   * [Linear Search](https://en.wikipedia.org/wiki/Linear_search)
+  * [Binary Search](https://en.wikipedia.org/wiki/Binary_search_algorithm)
