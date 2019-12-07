@@ -6,6 +6,7 @@
 * Sort
   * [Bubble Sort](https://en.wikipedia.org/wiki/Bubble_sort)
   * [Insertion Sort](https://en.wikipedia.org/wiki/Insertion_sort)
+  * [Selection Sort](https://en.wikipedia.org/wiki/Selection_sort)
   * [Merge Sort](https://en.wikipedia.org/wiki/Merge_sort)
 * Search
   * [Linear Search](https://en.wikipedia.org/wiki/Linear_search)
