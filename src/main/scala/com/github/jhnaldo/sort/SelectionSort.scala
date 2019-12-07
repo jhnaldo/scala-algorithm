@@ -6,7 +6,7 @@ import scala.collection.mutable.Buffer
  * selection sort is a sorting algorithm, specifically an in-place comparison sort.
  *
  * Time Complexity:
- *  - Best - O(n)
+ *  - Best - O(n^2^)
  *  - Worst - O(n^2^)
  *  - Average - O(n^2^)
  *
