@@ -11,4 +11,4 @@
   * [Linear Search](https://en.wikipedia.org/wiki/Linear_search)
   * [Binary Search](https://en.wikipedia.org/wiki/Binary_search_algorithm)
 * Dynamic Programming
-  * [Maximum Subarray Problem (Dynamic Progrmming)](https://en.wikipedia.org/wiki/Maximum_subarray_problem#Kadane's_algorithm_(Algorithm_3:_Dynamic_Programming))
+  * [Maximum Subarray Problem](https://en.wikipedia.org/wiki/Maximum_subarray_problem#Kadane's_algorithm_(Algorithm_3:_Dynamic_Programming))
