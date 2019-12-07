@@ -11,7 +11,7 @@ package com.github.jhnaldo.sort
  *
  * @see [[https://en.wikipedia.org/wiki/Insertion_sort]]
  */
-object InsertionSort {
+object InsertionSort extends Sort {
   /**
    * Sorts a list of elements
    *
@@ -19,7 +19,7 @@ object InsertionSort {
    * @param list a list of elements
    * @return the sorted list of the elements
    */
-  def sort[A <% Ordered[A]](list: List[A]): List[A] = {
+  def sort[A](list: List[A])(implicit ev: A => Ordered[A]): List[A] = {
     def insertList(list: List[A], sorted: List[A]): List[A] = list match {
       case hd :: tl => insertList(tl, insertElem(Nil, hd, sorted))
       case Nil => sorted

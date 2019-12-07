@@ -24,7 +24,7 @@ object BinarySearch {
    * @param sortedList a sorted list of elements
    * @return the index of the element or -1 if it does not exist in the list
    */
-  def search[A <% Ordered[A]](elem: A, list: List[A]): Int = {
+  def search[A](elem: A, sortedList: List[A])(implicit ev: A => Ordered[A]): Int = {
     def findIndex(list: List[A], idx: Int): Int = {
       val midIdx = list.length / 2
       list.splitAt(midIdx) match {
@@ -36,6 +36,6 @@ object BinarySearch {
       }
     }
 
-    findIndex(list, 0)
+    findIndex(sortedList, 0)
   }
 }

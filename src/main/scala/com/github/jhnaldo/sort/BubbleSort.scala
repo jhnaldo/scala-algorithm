@@ -12,7 +12,7 @@ package com.github.jhnaldo.sort
  *
  * @see [[https://en.wikipedia.org/wiki/Bubble_sort]]
  */
-object BubbleSort {
+object BubbleSort extends Sort {
   /**
    * Sorts a list of elements
    *
@@ -20,7 +20,7 @@ object BubbleSort {
    * @param list a list of elements
    * @return the sorted list of the elements
    */
-  def sort[A <% Ordered[A]](list: List[A]): List[A] = {
+  def sort[A](list: List[A])(implicit ev: A => Ordered[A]): List[A] = {
     def bubble(list: List[A], acc: List[A]): List[A] = list match {
       case a :: b :: tl =>
         if (a < b) bubble(b :: tl, a :: acc)

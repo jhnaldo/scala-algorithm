@@ -14,7 +14,7 @@ package com.github.jhnaldo.sort
  *
  * @see [[https://en.wikipedia.org/wiki/Merge_sort]]
  */
-object MergeSort {
+object MergeSort extends Sort {
   /**
    * Sorts a list of elements
    *
@@ -22,7 +22,7 @@ object MergeSort {
    * @param list a list of elements
    * @return the sorted list of n elements
    */
-  def sort[A <% Ordered[A]](list: List[A]): List[A] = {
+  def sort[A](list: List[A])(implicit ev: A => Ordered[A]): List[A] = {
     val len = list.length
     if (len > 1){
       val (left, right) = list.splitAt(len / 2)

@@ -4,9 +4,16 @@ lazy val root = (project in file(".")).
   settings(
     inThisBuild(List(
       organization := "com.github.jhnaldo",
-      scalaVersion := "2.12.4",
-      version      := "0.1.0"
+      scalaVersion := "2.13.1",
+      version      := "0.0"
     )),
-    name := "scala-algorithm",
-    libraryDependencies += scalaTest % Test
+    name := "scala-algorithm"
   )
+
+libraryDependencies += "org.scalatest" %% "scalatest" % "3.1.0" % "test"
+
+scalacOptions in ThisBuild ++= Seq("-deprecation", "-feature",
+                                   "-language:postfixOps",
+                                   "-language:implicitConversions")
+
+javacOptions ++= Seq("-encoding", "UTF-8")

@@ -1,4 +1,4 @@
-package com.github.jhnaldo.search
+package com.github.jhnaldo.dp
 
 import math.max
 
