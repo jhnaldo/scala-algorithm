@@ -2,7 +2,11 @@
 * Implement data structures and algorithms in [Scala](https://www.scala-lang.org/)
 * Study the book: [Introduction to Algorithms](https://mitpress.mit.edu/books/introduction-algorithms)
 
-# Implemented Algorithms
+# Data Structures
+* [Heap](https://en.wikipedia.org/wiki/Heap_(data_structure))
+  * [Binary Heap](https://en.wikipedia.org/wiki/Binary_heap)
+
+# Algorithms
 * Sort
   * [Bubble Sort](https://en.wikipedia.org/wiki/Bubble_sort)
   * [Insertion Sort](https://en.wikipedia.org/wiki/Insertion_sort)
@@ -11,5 +15,5 @@
 * Search
   * [Linear Search](https://en.wikipedia.org/wiki/Linear_search)
   * [Binary Search](https://en.wikipedia.org/wiki/Binary_search_algorithm)
-* Dynamic Programming
+* [Dynamic Programming](https://en.wikipedia.org/wiki/Dynamic_programming)
   * [Maximum Subarray Problem](https://en.wikipedia.org/wiki/Maximum_subarray_problem#Kadane's_algorithm_(Algorithm_3:_Dynamic_Programming))
