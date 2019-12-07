@@ -39,11 +39,11 @@ object MergeSort extends Sort {
    * @param sorted a sorted list in the reversed order
    * @return the sorted list merged the left and right sorted lists
    */
-  def merge[A <% Ordered[A]](
+  def merge[A](
     left: List[A],
     right: List[A],
     sorted: List[A]
-  ): List[A] = (left, right) match {
+  )(implicit ev: A => Ordered[A]): List[A] = (left, right) match {
     case (lhd :: ltl, rhd :: rtl) =>
       if (lhd < rhd) merge(ltl, right, lhd :: sorted)
       else merge(left, rtl, rhd :: sorted)
