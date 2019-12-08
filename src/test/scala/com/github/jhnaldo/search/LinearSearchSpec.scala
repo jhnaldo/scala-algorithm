@@ -1,8 +1,8 @@
-import org.scalatest.matchers.should._
-import org.scalatest.flatspec._
-import com.github.jhnaldo.search.LinearSearch
+package com.github.jhnaldo.search
 
-class LinearSearchSpec extends AnyFlatSpec with Matchers {
+import com.github.jhnaldo.Spec
+
+class LinearSearchSpec extends Spec {
   "The LinearSearch.search" should "return the index of an element" in {
     val list = List(1, 4, 3, 5, 2, 8, 6, 9, 7)
     LinearSearch.search(3, list) should be (2)

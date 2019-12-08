@@ -9,7 +9,7 @@ import com.github.jhnaldo.heap.BinaryHeap
  * by extracting the smallest element and moving that to the sorted region.
  * The improvement consists of the use of a heap data structure rather than
  * a linear-time search to find the maximum.
- * 
+ *
  * Time Complexity:
  *  - Best - O(n log n)
  *  - Worst - O(n log n)
@@ -17,7 +17,7 @@ import com.github.jhnaldo.heap.BinaryHeap
  *
  * @see [[https://en.wikipedia.org/wiki/Heapsort]]
  */
-object HeapSort extends Sort {
+object HeapSort extends Sort("HeapSort") {
   /**
    * Sorts a list of elements
    *

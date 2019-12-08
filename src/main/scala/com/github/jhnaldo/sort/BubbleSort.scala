@@ -12,7 +12,7 @@ package com.github.jhnaldo.sort
  *
  * @see [[https://en.wikipedia.org/wiki/Bubble_sort]]
  */
-object BubbleSort extends Sort {
+object BubbleSort extends Sort("BubbleSort") {
   /**
    * Sorts a list of elements
    *

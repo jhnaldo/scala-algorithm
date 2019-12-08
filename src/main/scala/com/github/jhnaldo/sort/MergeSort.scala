@@ -14,7 +14,7 @@ package com.github.jhnaldo.sort
  *
  * @see [[https://en.wikipedia.org/wiki/Merge_sort]]
  */
-object MergeSort extends Sort {
+object MergeSort extends Sort("MergeSort") {
   /**
    * Sorts a list of elements
    *

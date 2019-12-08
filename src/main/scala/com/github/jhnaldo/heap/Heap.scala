@@ -57,3 +57,35 @@ trait Heap[A] {
    */
   override def toString: String
 }
+
+/**
+ * A factory for heap structures
+ */
+trait HeapFactory {
+  /**
+   * A factory to construct a new heap
+   *
+   * @return a new heap
+   */
+  protected def factory[A](implicit ev: A => Ordered[A]): Heap[A]
+
+  /**
+   * Creates a binomial heap with a given items
+   *
+   * @param list a list of items
+   * @return a binomial heap
+   */
+  def apply[A](list: List[A])(implicit ev: A => Ordered[A]): Heap[A] = {
+    val heap = factory[A]
+    list.foreach(heap insert _)
+    heap
+  }
+
+  /**
+   * Creates a binomial heap with a given items
+   *
+   * @param seq a sequence of items
+   * @return a binomial heap
+   */
+  def apply[A](seq: A*)(implicit ev: A => Ordered[A]): Heap[A] = apply(seq.toList)(ev)
+}

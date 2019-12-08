@@ -1,10 +1,10 @@
-import org.scalatest.matchers.should._
-import org.scalatest.flatspec._
-import com.github.jhnaldo.heap.BinomialHeap
+package com.github.jhnaldo.heap
 
-class BinomialHeapSpec extends AnyFlatSpec with Matchers {
-  "The BinomialHeap" should "be a priority queue" in {
-    val heap = BinomialHeap(1, 2, 25, 3, 8, 342, 475, 75, 634, 7437, 34, 865, 4, 5)
+import com.github.jhnaldo.Spec
+
+abstract class HeapSpec(Heap: HeapFactory) extends Spec {
+  s"The $Heap" should "be a priority queue" in {
+    val heap = BinaryHeap(1, 2, 25, 3, 8, 342, 475, 75, 634, 7437, 34, 865, 4, 5)
     heap.deleteMin should be (Some(1))
     heap.deleteMin should be (Some(2))
     heap.deleteMin should be (Some(3))
@@ -34,3 +34,6 @@ class BinomialHeapSpec extends AnyFlatSpec with Matchers {
     heap.deleteMin should be (None)
   }
 }
+
+class BinaryHeapSpec extends HeapSpec(BinaryHeap)
+class BinomialHeapSpec extends HeapSpec(BinomialHeap)

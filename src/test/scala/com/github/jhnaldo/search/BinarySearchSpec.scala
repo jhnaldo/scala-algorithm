@@ -1,8 +1,8 @@
-import org.scalatest.matchers.should._
-import org.scalatest.flatspec._
-import com.github.jhnaldo.search.BinarySearch
+package com.github.jhnaldo.search
 
-class BinarySearchSpec extends AnyFlatSpec with Matchers {
+import com.github.jhnaldo.Spec
+
+class BinarySearchSpec extends Spec {
   "The BinarySearch.search" should "return the index of an element" in {
     val list = List(2, 5, 7, 13, 20, 52, 100, 525)
     BinarySearch.search(13, list) should be (3)

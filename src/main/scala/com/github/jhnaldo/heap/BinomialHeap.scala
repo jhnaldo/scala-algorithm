@@ -118,7 +118,7 @@ class BinomialHeap[A](implicit val ev: A => Ordered[A]) extends Heap[A] {
 }
 
 /** Factory for [[com.github.jhnaldo.heap.BinomialHeap]] instances. */
-object BinomialHeap {
+object BinomialHeap extends HeapFactory {
   private case class BinomialNode[A](
     var p: Option[BinomialNode[A]],
     var item: A,
@@ -127,23 +127,5 @@ object BinomialHeap {
     var sibling: Option[BinomialNode[A]]
   )
 
-  /**
-   * Creates a binomial heap with a given items
-   *
-   * @param list a list of items
-   * @return a binomial heap
-   */
-  def apply[A](list: List[A])(implicit ev: A => Ordered[A]): BinomialHeap[A] = {
-    val heap = new BinomialHeap[A]
-    list.foreach(heap insert _)
-    heap
-  }
-
-  /**
-   * Creates a binomial heap with a given items
-   *
-   * @param seq a sequence of items
-   * @return a binomial heap
-   */
-  def apply[A](seq: A*)(implicit ev: A => Ordered[A]): BinomialHeap[A] = apply(seq.toList)(ev)
+  protected def factory[A](implicit ev: A => Ordered[A]): Heap[A] = new BinomialHeap[A]
 }

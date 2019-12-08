@@ -1,8 +1,8 @@
-import org.scalatest.matchers.should._
-import org.scalatest.flatspec._
-import com.github.jhnaldo.dp.MaxSubArray
+package com.github.jhnaldo.dp
 
-class MaxSubArraySpec extends AnyFlatSpec with Matchers {
+import com.github.jhnaldo.Spec
+
+class MaxSubArraySpec extends Spec {
   "The MaxSubArray.search" should "return the maximum sum among subarrays" in {
     val list = List[Long](
       13, -3, -25, 20, -3, -16, -23, 18, 20,

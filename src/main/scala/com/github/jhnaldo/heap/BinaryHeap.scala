@@ -75,12 +75,6 @@ class BinaryHeap[A](implicit val ev: A => Ordered[A]) extends Heap[A] {
 }
 
 /** Factory for [[com.github.jhnaldo.heap.BinaryHeap]] instances. */
-object BinaryHeap {
-  def apply[A](list: List[A])(implicit ev: A => Ordered[A]): BinaryHeap[A] = {
-    val heap = new BinaryHeap[A]
-    list.foreach(heap insert _)
-    heap
-  }
-
-  def apply[A](seq: A*)(implicit ev: A => Ordered[A]): BinaryHeap[A] = apply(seq.toList)(ev)
+object BinaryHeap extends HeapFactory {
+  protected def factory[A](implicit ev: A => Ordered[A]): Heap[A] = new BinaryHeap[A]
 }

@@ -11,7 +11,7 @@ package com.github.jhnaldo.sort
  *
  * @see [[https://en.wikipedia.org/wiki/Insertion_sort]]
  */
-object InsertionSort extends Sort {
+object InsertionSort extends Sort("InsertionSort") {
   /**
    * Sorts a list of elements
    *

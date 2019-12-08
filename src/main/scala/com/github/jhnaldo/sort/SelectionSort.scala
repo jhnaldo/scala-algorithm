@@ -12,7 +12,7 @@ import scala.collection.mutable.Buffer
  *
  * @see [[https://en.wikipedia.org/wiki/Selection_sort]]
  */
-object SelectionSort extends Sort {
+object SelectionSort extends Sort("SelectionSort") {
   /**
    * Sorts a list of elements
    *

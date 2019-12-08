@@ -12,6 +12,8 @@ lazy val root = (project in file(".")).
 
 libraryDependencies += "org.scalatest" %% "scalatest" % "3.1.0" % "test"
 
+testOptions in Test += Tests.Argument(TestFrameworks.ScalaTest, "-fDG", "result.txt", "-oDG")
+
 scalacOptions in ThisBuild ++= Seq("-deprecation", "-feature",
                                    "-language:postfixOps",
                                    "-language:implicitConversions")

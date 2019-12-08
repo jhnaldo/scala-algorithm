@@ -1,6 +1,6 @@
 package com.github.jhnaldo.sort
 
-trait Sort {
+abstract class Sort(name: String) {
   /**
    * Sorts a list of elements
    *
@@ -9,4 +9,6 @@ trait Sort {
    * @return the sorted list of the elements
    */
   def sort[A](list: List[A])(implicit ev: A => Ordered[A]): List[A]
+
+  override def toString: String = name
 }
