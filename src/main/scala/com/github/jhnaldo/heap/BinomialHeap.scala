@@ -11,6 +11,10 @@ import scala.collection.mutable.ArrayBuffer
  * but using a special tree structure that is different from the complete binary
  * trees used by binary heaps. Binomial heaps were invented in 1978 by Jean Vuillemin.
  *
+ * Time Complexity:
+ *  - Insert - O(1) (amortized)
+ *  - Delete - O(log n)
+ *
  * @tparam A the type of each element
  *
  * @see [[https://en.wikipedia.org/wiki/Binomial_heap]]
