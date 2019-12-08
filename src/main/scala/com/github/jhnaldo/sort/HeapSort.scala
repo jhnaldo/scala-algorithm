@@ -27,8 +27,12 @@ object HeapSort extends Sort("HeapSort") {
    */
   def sort[A](list: List[A])(implicit ev: A => Ordered[A]): List[A] = {
     val heap = BinaryHeap(list)
-    def aux(list: List[A]): List[A] =
-      heap.deleteMin.fold(list)(x => aux(x :: list))
+
+    def aux(list: List[A]): List[A] = heap.deleteMin match {
+      case None => list
+      case Some(x) => aux(x :: list)
+    }
+
     aux(Nil).reverse
   }
 }
