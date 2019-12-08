@@ -6,8 +6,9 @@ import scala.collection.mutable.ArrayBuffer
  * A binary heap is a heap data structure that takes the form of a binary tree.
  *
  * Time Complexity:
- *  - Insert - O(log n)
- *  - Delete - O(log n)
+ *  - findMin - O(1)
+ *  - insert - O(log n)
+ *  - deleteMin - O(log n)
  *
  * @tparam A the type of each element
  *
