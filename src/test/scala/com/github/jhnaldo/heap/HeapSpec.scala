@@ -4,7 +4,7 @@ import com.github.jhnaldo.Spec
 
 abstract class HeapSpec(Heap: HeapFactory) extends Spec {
   s"The $Heap" should "be a priority queue" in {
-    val heap = BinaryHeap(1, 2, 25, 3, 8, 342, 475, 75, 634, 7437, 34, 865, 4, 5)
+    val heap = Heap(1, 2, 25, 3, 8, 342, 475, 75, 634, 7437, 34, 865, 4, 5)
     heap.deleteMin should be (Some(1))
     heap.deleteMin should be (Some(2))
     heap.deleteMin should be (Some(3))
@@ -37,3 +37,4 @@ abstract class HeapSpec(Heap: HeapFactory) extends Spec {
 
 class BinaryHeapSpec extends HeapSpec(BinaryHeap)
 class BinomialHeapSpec extends HeapSpec(BinomialHeap)
+class FibonacciHeapSpec extends HeapSpec(FibonacciHeap)

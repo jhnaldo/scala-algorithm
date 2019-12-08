@@ -15,6 +15,8 @@ class BuiltinSortSpec extends SortSpec(new Sort("BuiltinSort") {
 
 class BubbleSortSpec extends SortSpec(BubbleSort)
 class HeapSortSpec extends SortSpec(HeapSort)
+class BinomialSortSpec extends SortSpec(BinomialHeapSort)
+class FibonacciHeapSortSpec extends SortSpec(FibonacciHeapSort)
 class InsertionSortSpec extends SortSpec(InsertionSort)
 class MergeSortSpec extends SortSpec(MergeSort)
 class SelectionSortSpec extends SortSpec(SelectionSort)

@@ -6,6 +6,7 @@
 * [Heap](https://en.wikipedia.org/wiki/Heap_(data_structure))
   * [Binary Heap](https://en.wikipedia.org/wiki/Binary_heap)
   * [Binomial Heap](https://en.wikipedia.org/wiki/Binomial_heap)
+  * [Fibonacci Heap](https://en.wikipedia.org/wiki/Fibonacci_heap)
 
 # Algorithms
 * Sort
