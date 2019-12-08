@@ -23,12 +23,6 @@ class BinaryHeap[A](implicit val ev: A => Ordered[A]) extends Heap[A] {
     tree(y) = temp
   }
 
-  /**
-   * Adding a new key to the heap (a.k.a., push)
-   *
-   * @param x a new item
-   * @return unit value
-   */
   def insert(x: A): Unit = {
     val cur = size
     // 1. Add the element to the bottom level of the heap at the most left.
@@ -43,12 +37,6 @@ class BinaryHeap[A](implicit val ev: A => Ordered[A]) extends Heap[A] {
     upHeap(cur)
   }
 
-  /**
-   * Returns the node of minimum value from a min-heap after
-   * removing it from the heap (a.k.a., pop)
-   *
-   * @return the minimum item
-   */
   def extractMin: Option[A] = size match {
     case 0 => None
     case 1 => Some(tree.remove(0))
@@ -74,40 +62,18 @@ class BinaryHeap[A](implicit val ev: A => Ordered[A]) extends Heap[A] {
       Some(res)
   }
 
-  /**
-   * The size of the heap
-   *
-   * @return the size of the heap
-   */
   def size: Int = tree.length
 
-  /**
-   * Beautified form
-   *
-   * @return Beautified form of the heap
-   */
   override def toString: String = tree.mkString("[", ", ", "]")
 }
 
 /** Factory for [[com.github.jhnaldo.heap.BinaryHeap]] instances. */
 object BinaryHeap {
-  /**
-   * Creates a binary heap with a given items
-   *
-   * @param list a list of items
-   * @return a binary heap
-   */
   def apply[A](list: List[A])(implicit ev: A => Ordered[A]): BinaryHeap[A] = {
     val heap = new BinaryHeap[A]
     list.foreach(heap insert _)
     heap
   }
 
-  /**
-   * Creates a binary heap with a given items
-   *
-   * @param seq a sequence of items
-   * @return a binary heap
-   */
   def apply[A](seq: A*)(implicit ev: A => Ordered[A]): BinaryHeap[A] = apply(seq.toList)(ev)
 }

@@ -41,4 +41,12 @@ trait Heap[A] {
    * @return the size of the heap
    */
   def size: Int
+
+
+  /**
+   * Beautified form
+   *
+   * @return Beautified form of the heap
+   */
+  override def toString: String
 }
