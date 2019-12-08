@@ -11,3 +11,4 @@ target/
 *.swo
 *.swp
 *~
+result.txt
