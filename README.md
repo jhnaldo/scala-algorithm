@@ -14,6 +14,7 @@
   * [Selection Sort](https://en.wikipedia.org/wiki/Selection_sort)
   * [Heap Sort](https://en.wikipedia.org/wiki/Heapsort)
   * [Merge Sort](https://en.wikipedia.org/wiki/Merge_sort)
+  * [Quick Sort](https://en.wikipedia.org/wiki/Quicksort)
 * Search
   * [Linear Search](https://en.wikipedia.org/wiki/Linear_search)
   * [Binary Search](https://en.wikipedia.org/wiki/Binary_search_algorithm)
