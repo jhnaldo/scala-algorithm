@@ -63,6 +63,11 @@ trait Heap[A] {
  */
 trait HeapFactory {
   /**
+   * The name of the factory
+   */
+  protected val name: String
+
+  /**
    * A factory to construct a new heap
    *
    * @return a new heap
@@ -88,4 +93,6 @@ trait HeapFactory {
    * @return a binomial heap
    */
   def apply[A](seq: A*)(implicit ev: A => Ordered[A]): Heap[A] = apply(seq.toList)(ev)
+
+  override def toString: String = name
 }

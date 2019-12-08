@@ -127,5 +127,6 @@ object BinomialHeap extends HeapFactory {
     var sibling: Option[BinomialNode[A]]
   )
 
+  protected val name: String = "BinomialHeap"
   protected def factory[A](implicit ev: A => Ordered[A]): Heap[A] = new BinomialHeap[A]
 }

@@ -76,5 +76,6 @@ class BinaryHeap[A](implicit val ev: A => Ordered[A]) extends Heap[A] {
 
 /** Factory for [[com.github.jhnaldo.heap.BinaryHeap]] instances. */
 object BinaryHeap extends HeapFactory {
+  protected val name: String = "BinaryHeap"
   protected def factory[A](implicit ev: A => Ordered[A]): Heap[A] = new BinaryHeap[A]
 }
