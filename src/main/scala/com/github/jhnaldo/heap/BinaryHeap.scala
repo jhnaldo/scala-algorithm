@@ -27,6 +27,8 @@ class BinaryHeap[A](implicit val ev: A => Ordered[A]) extends Heap[A] {
     tree(y) = temp
   }
 
+  def findMin: Option[A] = if (isEmpty) None else Some(tree(0))
+
   def insert(x: A): Unit = {
     val cur = size
     // 1. Add the element to the bottom level of the heap at the most left.
@@ -41,10 +43,10 @@ class BinaryHeap[A](implicit val ev: A => Ordered[A]) extends Heap[A] {
     upHeap(cur)
   }
 
-  def extractMin: Option[A] = size match {
+  def deleteMin: Option[A] = size match {
     case 0 => None
     case 1 => Some(tree.remove(0))
-    case _ => 
+    case _ =>
       // 1. Replace the root of the heap with the last element on the last level.
       val res = tree(0)
       tree(0) = tree.remove(tree.size - 1)

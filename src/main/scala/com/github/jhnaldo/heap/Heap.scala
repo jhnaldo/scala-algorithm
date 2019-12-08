@@ -13,7 +13,14 @@ package com.github.jhnaldo.heap
  */
 trait Heap[A] {
   /**
-   * Adding a new key to the heap (a.k.a., push)
+   * Find a minimum item of a min-heap (a.k.a. peek)
+   *
+   * @return the minimum item
+   */
+  def findMin: Option[A]
+
+  /**
+   * Add a new key to the heap (a.k.a., push)
    *
    * @param x a new item
    * @return unit value
@@ -21,12 +28,12 @@ trait Heap[A] {
   def insert(x: A): Unit
 
   /**
-   * Returns the node of minimum value from a min-heap after
+   * Return the node of minimum value from a min-heap after
    * removing it from the heap (a.k.a., pop)
    *
    * @return the minimum item
    */
-  def extractMin: Option[A]
+  def deleteMin: Option[A]
 
   /**
    * Check whether the heap is empty or not.

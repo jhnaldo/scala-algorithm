@@ -22,6 +22,7 @@ import scala.collection.mutable.ArrayBuffer
 class BinomialHeap[A](implicit val ev: A => Ordered[A]) extends Heap[A] {
   private type Node = BinomialHeap.BinomialNode[A]
   private var head: Option[Node] = None
+  private var min: Option[A] = None
   private def link(y: Node, z: Node): Unit = {
     y.p = Some(z)
     y.sibling = z.child
@@ -68,8 +69,15 @@ class BinomialHeap[A](implicit val ev: A => Ordered[A]) extends Heap[A] {
         }
     }
     H.head.map(x => aux(None, x, x.sibling))
+    H.min = (this.min, that.min) match {
+      case (l, None) => l
+      case (None, r) => r
+      case (Some(l), Some(r)) => Some(if (l < r) l else r)
+    }
     H
   }
+
+  def findMin: Option[A] = min
 
   def insert(item: A): Unit = {
     val H = new BinomialHeap[A]
@@ -78,7 +86,7 @@ class BinomialHeap[A](implicit val ev: A => Ordered[A]) extends Heap[A] {
     count += 1
   }
 
-  def extractMin: Option[A] = head.map(head => {
+  def deleteMin: Option[A] = head.map(head => {
     def find(cur: (Option[Node], Node), min: (Option[Node], Node)): (Option[Node], Node) = {
       val ((_, curNode), (_, minNode)) = (cur, min)
       val newMin = if (curNode.item < minNode.item) cur else min
@@ -94,6 +102,7 @@ class BinomialHeap[A](implicit val ev: A => Ordered[A]) extends Heap[A] {
     val H = new BinomialHeap[A]
     H.head = rev(None, x.child)
     this.head = (this union H).head
+    this.min = this.head.map(head => find((None, head), (None, head))._2.item)
     count -= 1
     x.item
   })
